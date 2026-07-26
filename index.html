@@ -62,19 +62,30 @@ h1{
 }
 
 .button{
-    display:block;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
     width:90%;
     max-width:320px;
     margin:12px auto;
     padding:15px;
-    border-radius:30px;
     text-decoration:none;
     color:white;
     font-weight:bold;
-    background:#111;
-    border:2px solid transparent;
-    animation:rgbBorder 4s linear infinite;
-    box-shadow:0 0 15px rgba(255,255,255,0.2);
+    border-radius:30px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border:2px solid rgba(255,255,255,0.3);
+    transition:0.3s;
+}
+
+.button:hover{
+    transform:scale(1.05);
+}
+
+.button img{
+    border-radius:8px;
 }
 
 @keyframes rgbBorder{
