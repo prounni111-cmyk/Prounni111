@@ -71,7 +71,33 @@ h1{
     text-decoration:none;
     color:white;
     font-weight:bold;
-    transition:0.3s;
+    background:#111;
+    border:2px solid transparent;
+    animation:rgbBorder 4s linear infinite;
+    box-shadow:0 0 15px rgba(255,255,255,0.2);
+}
+
+@keyframes rgbBorder{
+    0%{
+        border-color:red;
+        box-shadow:0 0 15px red;
+    }
+    25%{
+        border-color:lime;
+        box-shadow:0 0 15px lime;
+    }
+    50%{
+        border-color:cyan;
+        box-shadow:0 0 15px cyan;
+    }
+    75%{
+        border-color:magenta;
+        box-shadow:0 0 15px magenta;
+    }
+    100%{
+        border-color:red;
+        box-shadow:0 0 15px red;
+    }
 }
 
 .button:hover{
