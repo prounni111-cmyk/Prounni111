@@ -213,5 +213,29 @@ footer{
 
 </div>
 
+<div id="datetime" style="margin-top:20px;font-size:18px;color:#00ffff;font-weight:bold;"></div>
+
+<script>
+function updateDateTime() {
+  const now = new Date();
+
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+
+  const date = now.toLocaleDateString('en-IN', options);
+  const time = now.toLocaleTimeString('en-IN');
+
+  document.getElementById("datetime").innerHTML =
+    date + "<br>" + time;
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+
 </body>
   </html>
